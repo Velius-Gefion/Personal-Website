@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { NavHead } from "../components/utilities"
-import { Carousel } from "react-bootstrap";
+import { Carousel, Image } from "react-bootstrap";
 
 export const Portfolio = () => {
     
@@ -102,18 +102,17 @@ export const Portfolio = () => {
                         <h1>Logo</h1>
                         <Carousel>
                             <Carousel.Item>
-                                
+                                <Image src={require('../resources/Mock_1.png')} fluid/>
                                 <Carousel.Caption>
                                     <h3>1</h3>
                                 </Carousel.Caption>
                             </Carousel.Item>
-                            
-                                <Carousel.Item>
-                                    
-                                    <Carousel.Caption>
-                                        <h3>2</h3>
-                                    </Carousel.Caption>
-                                </Carousel.Item>
+                            <Carousel.Item>
+                                <Image src={require('../resources/Mock_2.png')} fluid/>
+                                <Carousel.Caption>
+                                    <h3>2</h3>
+                                </Carousel.Caption>
+                            </Carousel.Item>
                         </Carousel>
                     <h1>Motion Graphics</h1>
                     <h1></h1>

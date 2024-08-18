@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Nav, NavLink } from "react-bootstrap";
 import { useLocation } from "react-router-dom";
 
@@ -84,4 +85,20 @@ export const NavHead = () => {
             </header>
         </>
     )
+}
+
+export const TitleUpdater = () => {
+    const location = useLocation();
+    useEffect(() => {
+        const titleMap = {
+            '/': 'Home',
+            '/Portfolio': 'Portfolio',
+            '/About-Me': 'About Me'
+        }  
+
+        const currentTitle = titleMap[location.pathname] || 'Default Title';
+        document.title = currentTitle;
+    }, [location]);
+
+    return null;
 }
