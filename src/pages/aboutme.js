@@ -1,14 +1,49 @@
 import { NavHead } from "../components/utilities"
+import { Row, Col, Image, Card, CardHeader, CardBody, CardFooter } from "react-bootstrap";
 
 export const AboutMe = () => {
     return (
         <>
             <NavHead/>
+            
             <h1>About Me</h1>
-            <p>I am Cyril Dominic P. Cataraja, a 4th year BSIT Student based in the Philippines</p>
-            <h5>React Firebase Dev</h5>
-            <h5>Video Editor</h5>
-            <h5>Graphic Designer</h5>
+            <Row className="mt-3">
+                <Col>
+                    <div className="container">
+                        
+                        
+                        
+                        <Card>
+                            <CardHeader className="mt-3 mb-3">
+                                <Image src={require('../resources/Me.jpg')} style={{width: "250px", height: "250px"}} fluid/>
+                            </CardHeader>
+                            <CardBody>
+                                <h5>I am Cyril Dominic P. Cataraja, a Freelancer based in the Philippines</h5>
+                            </CardBody>
+                            <CardFooter>
+                            <h6>Web Designer</h6>
+                        <h6>Video Editor</h6>
+                        <h6>Grahic Designer</h6>
+                            </CardFooter>
+                        </Card>
+                    </div>
+
+                    <h5 style={{position: "relative", textAlign: "center", paddingTop: "20px", paddingBottom: "50px"}}>
+                        You can contact me thru this email: <i class="fa-solid fa-envelope"></i> veliusgefion@gmail.com
+                    </h5>
+                </Col>
+                <Col>
+                    <iframe 
+                        src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FVeliusGefion&tabs=timeline&width=450&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
+                        width="450" 
+                        height="500" 
+                        style={{border: "none",overflow:"hidden"}} 
+                        frameborder="0" 
+                        allowfullscreen="true" 
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                    />
+                </Col>
+            </Row>
         </>
     )
 }

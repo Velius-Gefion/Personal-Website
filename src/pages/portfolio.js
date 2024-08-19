@@ -144,7 +144,9 @@ export const Portfolio = () => {
                     <h1>Motion Graphics</h1>
                     <Image src={require('../resources/Stand by Screen (Stationary).gif')} fluid/>
                     <h1></h1>
-                    <h1>Sample Websites</h1>
+                    <h1>Functional Sample Websites</h1>
+
+
                     <embed src="https://sei-qr-code-ticket.web.app/"  style={{width:"500px", height: "300px"}}></embed>
                     <embed src="https://badat-health-tracking.web.app/" style={{width:"500px", height: "300px"}}></embed>
                 </div>
