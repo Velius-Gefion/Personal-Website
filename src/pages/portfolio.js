@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { NavHead } from "../components/utilities"
-import { Carousel, Image } from "react-bootstrap";
+import { Carousel, Image, Row, Col, Card } from "react-bootstrap";
 
 export const Portfolio = () => {
     
@@ -100,23 +100,53 @@ export const Portfolio = () => {
                     ></iframe>
                         <hr/>
                         <h1>Logo</h1>
-                        <Carousel>
-                            <Carousel.Item>
-                                <Image src={require('../resources/Mock_1.png')} fluid/>
-                                <Carousel.Caption>
-                                    <h3>1</h3>
-                                </Carousel.Caption>
-                            </Carousel.Item>
-                            <Carousel.Item>
-                                <Image src={require('../resources/Mock_2.png')} fluid/>
-                                <Carousel.Caption>
-                                    <h3>2</h3>
-                                </Carousel.Caption>
-                            </Carousel.Item>
-                        </Carousel>
+                        <hr/>
+                        <Row>
+                            <Col>
+                                <h1>
+                                    Mock up
+                                </h1>
+                                
+                            </Col>
+                            <Col>
+                            <div className="d-flex justify-content-center align-items-center vh-100" style={{maxWidth:"1000px", maxHeight:"500px", width:"100%", margin:"0 auto", overflow:"hidden"}}>
+                                <Card>
+                                <Carousel>
+                                    <Carousel.Item>
+                                        <Image src={require('../resources/Mock_SSC_1.png')} fluid/>
+                                        <Carousel.Caption>
+                                            <h3>1</h3>
+                                        </Carousel.Caption>
+                                    </Carousel.Item>
+                                    <Carousel.Item>
+                                        <Image src={require('../resources/Mock_SSC_2.png')} fluid/>
+                                        <Carousel.Caption>
+                                            <h3>2</h3>
+                                        </Carousel.Caption>
+                                    </Carousel.Item>
+                                    <Carousel.Item>
+                                        <Image src={require('../resources/Mock_Katsun_1.png')} fluid/>
+                                        <Carousel.Caption>
+                                            <h3>3</h3>
+                                        </Carousel.Caption>
+                                    </Carousel.Item><Carousel.Item>
+                                        <Image src={require('../resources/Mock_Katsun_2.png')} fluid/>
+                                        <Carousel.Caption>
+                                            <h3>4</h3>
+                                        </Carousel.Caption>
+                                    </Carousel.Item>
+                                </Carousel>
+                                </Card>
+                                </div>
+                            </Col>
+                        </Row>
+                        
                     <h1>Motion Graphics</h1>
+                    <Image src={require('../resources/Stand by Screen (Stationary).gif')} fluid/>
                     <h1></h1>
                     <h1>Sample Websites</h1>
+                    <embed src="https://sei-qr-code-ticket.web.app/"  style={{width:"500px", height: "300px"}}></embed>
+                    <embed src="https://badat-health-tracking.web.app/" style={{width:"500px", height: "300px"}}></embed>
                 </div>
             </div>
         </>

@@ -8,12 +8,15 @@ import {TitleUpdater} from './components/utilities';
 function App() {
   return (
     <div className="App">
+      <Router>
       <TitleUpdater/>
+      
       <Routes>
         <Route path="/" element={<HomePage/>}/>
         <Route path="/Portfolio" element={<Portfolio/>}/>
         <Route path="/About-Me" element={<AboutMe/>}/>
       </Routes>
+      </Router>
     </div>
   );
 }

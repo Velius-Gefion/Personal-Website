@@ -96,7 +96,7 @@ export const TitleUpdater = () => {
             '/About-Me': 'About Me'
         }  
 
-        const currentTitle = titleMap[location.pathname] || 'Default Title';
+        const currentTitle = titleMap[location.pathname] || '/';
         document.title = currentTitle;
     }, [location]);
 
