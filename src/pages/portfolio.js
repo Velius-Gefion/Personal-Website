@@ -1,8 +1,21 @@
 import { useEffect } from "react";
+import { NavLink, useLocation } from "react-router-dom";
 import { NavHead } from "../components/utilities"
 import { Carousel, Image, Row, Col, Card, CardBody, Button, Container } from "react-bootstrap";
 
 export const Portfolio = () => {
+    const location = useLocation();
+
+    useEffect(() => {
+        const hash = location.hash;
+        if (hash) {
+            const element = document.querySelector(hash);
+            if (element) {
+                element.scrollIntoView({ behavior: "smooth" });
+            }
+        }
+    }, [location]);
+
     return (
         <>
             <style>
@@ -60,11 +73,11 @@ export const Portfolio = () => {
             <div className="portfolio-container">
                 <div className="sidebar">
                     <ul style={{textAlign: "left"}}>
-                        <li><a href="#logo">Logo</a></li>
-                        <li><a href="#poster">Poster</a></li>
-                        <li><a href="#motion-graphics">Motion Graphics</a></li>
-                        <li><a href="#videos">Videos</a></li>
-                        <li><a href="#websites">Functional Sample Websites</a></li>
+                        <li><NavLink to="#logo">Logo</NavLink></li>
+                        <li><NavLink to="#poster">Poster</NavLink></li>
+                        <li><NavLink to="#motion-graphics">Motion Graphics</NavLink></li>
+                        <li><NavLink to="#videos">Videos</NavLink></li>
+                        <li><NavLink to="#websites">Functional Sample Websites</NavLink></li>
                     </ul>
                 </div>
 

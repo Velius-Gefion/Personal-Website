@@ -95,6 +95,28 @@ export const NavHead = () => {
     )
 }
 
+export const NavFooter = () => {
+    return (
+        <>
+            <style>
+                {`
+                    footer {
+                        padding: .25rem 0;
+                        font-weight: 700;
+                        color: rgba(201, 201, 201, 0.5);
+                        background-color: transparent;
+                        border-bottom: .25rem solid transparent;
+                        background-color: rgb(68, 57, 85);
+                    }
+                `}
+            </style>
+            <footer>
+                <p className="mt-3 mb-3">Copyright © 2024 - Cyril Dominic P. Cataraja - All Rights Reserved.</p>
+            </footer>
+        </>
+    )
+}
+
 export const TitleUpdater = () => {
     const location = useLocation();
     useEffect(() => {

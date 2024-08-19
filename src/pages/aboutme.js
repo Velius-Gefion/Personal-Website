@@ -8,16 +8,33 @@ export const AboutMe = () => {
             <h1 className="mt-3 mb-3">About Me</h1>
             <Row className="mt-3">
                 <Col>
-                    <div>
-                        <Card>
-                            <CardHeader className="mt-3 mb-3">
-                                <Image src={require('../resources/Me.jpg')} style={{width: "250px", height: "250px"}} fluid/>
-                            </CardHeader>
-                            <CardBody>
-                                <h5>I am Cyril Dominic P. Cataraja, a Freelancer based in the Philippines</h5>
-                            </CardBody>
-                            <CardFooter>
-                                <h5>I am a</h5>
+                    <Row>
+                        <Col>
+                            <Card>
+                                <Image src={require('../resources/Me.jpg')} style={{width: "250px", height: "250px"}} fluid/>    
+                            </Card>
+                        </Col>
+                        <Col>
+                        
+                        </Col>
+                    </Row>
+                    <Card>
+                        <CardHeader className="mt-3 mb-3">
+                            <Image src={require('../resources/Me.jpg')} style={{width: "250px", height: "250px"}} fluid/>
+                        </CardHeader>
+                        <CardBody>
+                            <h5>I am Cyril Dominic P. Cataraja, <br/>a Freelancer based in the Philippines</h5>
+                        </CardBody>
+                        <CardFooter>
+                        </CardFooter>
+                    </Card>
+                    
+                    
+                    <Row>
+                        <Col>
+                        </Col>
+                        <Col>
+                        <h5>I am a</h5>
                                 <h6> - Web Developer</h6>
                                 <h6>Javascript</h6>
                                 <h6>Java</h6>
@@ -26,12 +43,27 @@ export const AboutMe = () => {
                                 <h6>Vegas Pro 19</h6>
                                 <h6> - Video Editor</h6>
                                 <h6> - Grahic Designer</h6>
-                            </CardFooter>
-                        </Card>
-                    </div>
+                        </Col>
+                    </Row>
 
+                    
+                </Col>
+                <Col>
+
+                <h6 >
+                    Socials
+                    
+                </h6>
+                    
+                </Col>
+            </Row>
+
+            <Row className="d-flex justify-content-center align-items-center vh-100">
+                <Col>
                     <h5 style={{position: "relative", textAlign: "center", paddingTop: "20px", paddingBottom: "50px"}}>
                         You can contact me thru this email: <i class="fa-solid fa-envelope"></i> veliusgefion@gmail.com
+                        <br/>
+                        or follow my socials to be updated.
                     </h5>
                 </Col>
                 <Col>
