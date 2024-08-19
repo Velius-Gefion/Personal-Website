@@ -1,21 +1,25 @@
 {
   "files": {
     "main.css": "/Personal-Website/static/css/main.a8032367.css",
-    "main.js": "/Personal-Website/static/js/main.f77c9f9b.js",
+    "main.js": "/Personal-Website/static/js/main.93b82556.js",
     "static/js/453.d9d7ee60.chunk.js": "/Personal-Website/static/js/453.d9d7ee60.chunk.js",
     "static/media/Stand by Screen (Stationary).gif": "/Personal-Website/static/media/Stand by Screen (Stationary).8cf300d2a581e9182fbb.gif",
     "static/media/Mock_SSC_1.png": "/Personal-Website/static/media/Mock_SSC_1.94ec727ecbb5f50ef001.png",
     "static/media/Mock_Katsun_1.png": "/Personal-Website/static/media/Mock_Katsun_1.b904da5604a5a4a1c79e.png",
+    "static/media/Lj.png": "/Personal-Website/static/media/Lj.a5d258c312e8e8e6e953.png",
+    "static/media/Tri-hop.png": "/Personal-Website/static/media/Tri-hop.e1bf918521f344e840ad.png",
     "static/media/Mock_SSC_2.png": "/Personal-Website/static/media/Mock_SSC_2.4facc35d7f52ca2a2a50.png",
     "static/media/Mock_Katsun_2.png": "/Personal-Website/static/media/Mock_Katsun_2.b18d86637a7524cf94c2.png",
+    "static/media/SSC_Logo.png": "/Personal-Website/static/media/SSC_Logo.e429dae8df8d05c7011b.png",
+    "static/media/katsun.png": "/Personal-Website/static/media/katsun.28f019c3603c49688939.png",
     "static/media/Me.jpg": "/Personal-Website/static/media/Me.468f5d990898b78a8331.jpg",
     "index.html": "/Personal-Website/index.html",
     "main.a8032367.css.map": "/Personal-Website/static/css/main.a8032367.css.map",
-    "main.f77c9f9b.js.map": "/Personal-Website/static/js/main.f77c9f9b.js.map",
+    "main.93b82556.js.map": "/Personal-Website/static/js/main.93b82556.js.map",
     "453.d9d7ee60.chunk.js.map": "/Personal-Website/static/js/453.d9d7ee60.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a8032367.css",
-    "static/js/main.f77c9f9b.js"
+    "static/js/main.93b82556.js"
   ]
 }
