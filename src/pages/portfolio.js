@@ -68,7 +68,6 @@ export const Portfolio = () => {
                     }
                 `}
             </style>
-            <NavHead/>
 
             
 

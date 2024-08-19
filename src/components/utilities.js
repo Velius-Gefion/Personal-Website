@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import { Nav, NavLink } from "react-bootstrap";
-import { useLocation } from "react-router-dom";
+import { Nav } from "react-bootstrap";
+import { useLocation, NavLink } from "react-router-dom";
 
 export const NavHead = () => {
     const location = useLocation();
@@ -77,9 +77,21 @@ export const NavHead = () => {
                 <div>
                     <h3 class="md-start mb-0">Velius</h3>
                     <Nav className="nav-masthead justify-content-center md-end">
-                        <NavLink aria-current="page" href="/" className={location.pathname === "/" ? "active" : ""}>Home</NavLink>
-                        <NavLink aria-current="page" href="/Portfolio" className={location.pathname === "/Portfolio" ? "active" : ""}>Portfolio</NavLink>
-                        <NavLink aria-current="page" href="/About-Me" className={location.pathname === "/About-Me" ? "active" : ""}>About Me</NavLink>
+                    <NavLink 
+                            to="/" 
+                            className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}>
+                            Home
+                        </NavLink>
+                        <NavLink 
+                            to="/Portfolio" 
+                            className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}>
+                            Portfolio
+                        </NavLink>
+                        <NavLink 
+                            to="/About-Me" 
+                            className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}>
+                            About Me
+                        </NavLink>
                     </Nav>
                 </div>
             </header>

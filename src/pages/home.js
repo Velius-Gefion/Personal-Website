@@ -29,7 +29,6 @@ export function HomePage() {
                     }
                 `}
             </style>
-            <NavHead/>
             <Row className="mt-3">
                 <Col>
                     <div className="container">

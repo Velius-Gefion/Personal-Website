@@ -3,19 +3,18 @@ import { BrowserRouter as Router, Route, Routes, Navigate, Outlet } from 'react-
 import { HomePage } from './pages/home';
 import { Portfolio } from './pages/portfolio';
 import { AboutMe } from './pages/aboutme';
-import { TitleUpdater } from './components/utilities';
+import { NavHead, TitleUpdater } from './components/utilities';
 
 function App() {
   return (
     <div className="App">
-      <Router>
+        <NavHead/>
         <TitleUpdater/>
         <Routes>
           <Route path="/" element={<HomePage/>}/>
           <Route path="/Portfolio" element={<Portfolio/>}/>
           <Route path="/About-Me" element={<AboutMe/>}/>
         </Routes>
-      </Router>
     </div>
   );
 }

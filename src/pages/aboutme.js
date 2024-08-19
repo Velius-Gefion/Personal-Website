@@ -4,15 +4,11 @@ import { Row, Col, Image, Card, CardHeader, CardBody, CardFooter } from "react-b
 export const AboutMe = () => {
     return (
         <>
-            <NavHead/>
             
             <h1>About Me</h1>
             <Row className="mt-3">
                 <Col>
                     <div className="container">
-                        
-                        
-                        
                         <Card>
                             <CardHeader className="mt-3 mb-3">
                                 <Image src={require('../resources/Me.jpg')} style={{width: "250px", height: "250px"}} fluid/>
