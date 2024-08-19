@@ -1,9 +1,8 @@
 import { useEffect } from "react";
 import { NavHead } from "../components/utilities"
-import { Carousel, Image, Row, Col, Card } from "react-bootstrap";
+import { Carousel, Image, Row, Col, Card, CardBody } from "react-bootstrap";
 
 export const Portfolio = () => {
-    
     return (
         <>
             <style>
@@ -12,83 +11,68 @@ export const Portfolio = () => {
                         display: flex;
                         min-height: 100vh;
                     }
-                `}
 
-                {`
                     .sidebar {
-                        margin-top: 40px;
+                        margin-top: 60px;
                         position: fixed;
-                        top: 60px; /* Adjust based on header height */
-                        height: calc(100vh - 60px); /* Adjust based on header height */
+                        top: 40px;
+                        height: calc(100vh - 60px);
                         width: 250px;
                         background-color: #333;
                         color: white;
                         padding: 20px;
-                        overflow-y: auto; /* Allows sidebar to scroll if content overflows */
+                        overflow-y: auto;
                     }
-                `}
 
-                {`
+                    .main-content {
+                        margin-left: 250px;
+                        padding: 0;
+                        background-color: #f4f4f4;
+                        width: calc(100% - 250px);
+                    }
+
+                    .main-content h1 {
+                        margin-top: 0;
+                        text-align: left;
+                        margin-left: 25px;
+                    }
+
                     .sidebar ul {
                         list-style-type: none;
                         padding: 0;
                     }
-                `}
 
-                {`
                     .sidebar ul li {
                         margin-bottom: 15px;
                     }
-                `}
 
-                {`
                     .sidebar ul li a {
                         color: white;
                         text-decoration: none;
                     }
-                `}
 
-                {`
                     .sidebar ul li a:hover {
                         text-decoration: underline;
                     }
                 `}
-
-                {`
-                    .main-content {
-                        flex: 1;
-                        padding: 20px;
-                        background-color: #f4f4f4;
-                    }
-                `}
-
-                {`
-                    .main-content h1 {
-                        margin-top: 0;
-                    }
-                `}
             </style>
 
-            
-
-            
             <div className="portfolio-container">
-                <div className={`d-none d-lg-flex flex-column flex-shrink-0 p-3 text-white bg-dark`}>
-                    {/*<div className="d-flex justify-content-center align-items-center mb-3">*/}
-                    <div >
-                        <ul>
-                            <li><a href="#section1">Videos</a></li>
-                            <li><a href="#section2">Logo</a></li>
-                            <li><a href="#section3">Post</a></li>
-                        </ul>
-                    </div>
+                <div className="sidebar">
+                    <ul>
+                        <li><a href="#videos">Videos</a></li>
+                        <li><a href="#logo">Logo</a></li>
+                        <li><a href="#poster">Post</a></li>
+                        <li><a href="#motion-graphics">Motion Graphics</a></li>
+                        <li><a href="#websites">Functional Sample Websites</a></li>
+                    </ul>
                 </div>
-                <div className="main-content">
-                    <h1>Portfolio</h1>
-                            
-                    <hr/>
-                    <h2>Videos</h2>
 
+                <div className="main-content">
+                    <h1 className="mt-3 mb-3">Portfolio</h1>
+                    <div id="videos" style={{position:"relative", top: "-110px"}}/>
+                    <h3 >Videos</h3>
+                    <hr/>
                     <iframe 
                         src="https://www.youtube.com/watch?v=qE9O81SL2s4" 
                         width="560" 
@@ -97,19 +81,44 @@ export const Portfolio = () => {
                         allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" 
                         allowFullScreen={true}
                     ></iframe>
-                        <hr/>
-                        <h1>Logo</h1>
-                        <hr/>
-                        <Row>
-                            <Col>
-                                <h1>
-                                    Mock up
-                                </h1>
-                                
-                            </Col>
-                            <Col>
+                    
+                    
+                    <div id="logo" style={{position:"relative", top: "-110px"}}/>
+                    <h3>Logo</h3>
+                    <hr/>
+                    <h3>Sample Logo 1 - Katsun Restaurant</h3>
+                    <Row className="d-flex justify-content-center align-items-center vh-100" style={{maxWidth:"1000px", maxHeight:"500px", width:"100%", margin:"0 auto", overflow:"hidden"}}>
+                        <Col>
+                            <Card style={{minWidth: "100px", minHeight: "100px", maxWidth: "400px", maxHeight: "400px"}}>
+                                <CardBody>
+                                    <Image src={require('../resources/katsun.png')} fluid/>
+                                </CardBody>
+                            </Card>
+                        </Col>
+                        <Col>
+                            <Card>
+                                <Carousel>
+                                    <Carousel.Item>
+                                        <Image src={require('../resources/Mock_Katsun_1.png')} fluid/>
+                                    </Carousel.Item>
+                                    <Carousel.Item>
+                                        <Image src={require('../resources/Mock_Katsun_2.png')} fluid/>
+                                    </Carousel.Item>
+                                </Carousel>
+                            </Card>
+                        </Col>
+                    </Row>
+                    <h3>Sample Logo 2 - Supreme Student Council</h3>
+                    <Row className="d-flex justify-content-center align-items-center vh-100" style={{maxWidth:"1000px", maxHeight:"500px", width:"100%", margin:"0 auto", overflow:"hidden"}}>
+                        <Col>
+                            <Card style={{minWidth: "100px", minHeight: "100px", maxWidth: "400px", maxHeight: "400px"}}>
+                                <CardBody>
+                                    <Image src={require('../resources/SSC_Logo.png')} fluid/>
+                                </CardBody>
+                            </Card>
+                        </Col>
+                        <Col>
                             <div className="d-flex justify-content-center align-items-center vh-100" style={{maxWidth:"1000px", maxHeight:"500px", width:"100%", margin:"0 auto", overflow:"hidden"}}>
-                                <Card>
                                 <Carousel>
                                     <Carousel.Item>
                                         <Image src={require('../resources/Mock_SSC_1.png')} fluid/>
@@ -123,33 +132,35 @@ export const Portfolio = () => {
                                             <h3>2</h3>
                                         </Carousel.Caption>
                                     </Carousel.Item>
-                                    <Carousel.Item>
-                                        <Image src={require('../resources/Mock_Katsun_1.png')} fluid/>
-                                        <Carousel.Caption>
-                                            <h3>3</h3>
-                                        </Carousel.Caption>
-                                    </Carousel.Item><Carousel.Item>
-                                        <Image src={require('../resources/Mock_Katsun_2.png')} fluid/>
-                                        <Carousel.Caption>
-                                            <h3>4</h3>
-                                        </Carousel.Caption>
-                                    </Carousel.Item>
                                 </Carousel>
-                                </Card>
-                                </div>
-                            </Col>
-                        </Row>
-                        
-                    <h1>Motion Graphics</h1>
+                            </div>
+                        </Col>
+                    </Row>
+
+                    <div id="poster" style={{position:"relative", top: "-110px"}}/>
+                    <h3>Poster</h3>
+                    <hr/>
+                    <Row className="d-flex justify-content-center align-items-center vh-100" style={{maxWidth:"1000px", maxHeight:"500px", width:"100%", margin:"0 auto", overflow:"hidden"}}>
+                        <Col>
+                            <Image src={require('../resources/Tri-hop.png')} fluid/>
+                        </Col>
+                        <Col>
+                            <Image src={require('../resources/Lj.png')} fluid/>
+                        </Col>
+                    </Row>
+
+                    <div id="motion-graphics" style={{position:"relative", top: "-110px"}}/>
+                    <h3>Motion Graphics</h3>
+                    <hr/>
                     <Image src={require('../resources/Stand by Screen (Stationary).gif')} fluid/>
-                    <h1></h1>
-                    <h1>Functional Sample Websites</h1>
-
-
-                    <embed src="https://sei-qr-code-ticket.web.app/"  style={{width:"500px", height: "300px"}}></embed>
+                    
+                    <div id="websites" style={{position:"relative", top: "-110px"}}/>
+                    <h3>Functional Sample Websites</h3>
+                    <hr/>
+                    <embed src="https://sei-qr-code-ticket.web.app/" style={{width:"500px", height: "300px"}}></embed>
                     <embed src="https://badat-health-tracking.web.app/" style={{width:"500px", height: "300px"}}></embed>
                 </div>
             </div>
         </>
-    )
+    );
 }

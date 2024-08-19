@@ -3,8 +3,7 @@ import { Nav } from "react-bootstrap";
 import { useLocation, NavLink } from "react-router-dom";
 
 export const NavHead = () => {
-    const location = useLocation();
-    
+
     return (
         <>
             <style>
@@ -54,7 +53,7 @@ export const NavHead = () => {
                 `}
             
                 {`
-                    header {
+                    .nav-header {
                         position: sticky;
                         top: 0;
                         z-index: 1000;
@@ -67,34 +66,31 @@ export const NavHead = () => {
                 `}
             
                 {`
-                    header h3 {
+                    .nav-header h3 {
                         padding-bottom: 10px;
                     }
                 `}
             </style>
-
-            <header>
-                <div>
-                    <h3 class="md-start mb-0">Velius</h3>
-                    <Nav className="nav-masthead justify-content-center md-end">
+            <div className="nav-header">
+                <h3 class="md-start mb-0">Velius</h3>
+                <Nav className="nav-masthead justify-content-center md-end">
                     <NavLink 
-                            to="/" 
-                            className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}>
-                            Home
-                        </NavLink>
-                        <NavLink 
-                            to="/Portfolio" 
-                            className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}>
-                            Portfolio
-                        </NavLink>
-                        <NavLink 
-                            to="/About-Me" 
-                            className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}>
-                            About Me
-                        </NavLink>
-                    </Nav>
-                </div>
-            </header>
+                        to="/" 
+                        className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}>
+                        Home
+                    </NavLink>
+                    <NavLink 
+                        to="/portfolio" 
+                        className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}>
+                        Portfolio
+                    </NavLink>
+                    <NavLink 
+                        to="/about-me" 
+                        className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}>
+                        About Me
+                    </NavLink>
+                </Nav>
+            </div>
         </>
     )
 }
@@ -104,8 +100,8 @@ export const TitleUpdater = () => {
     useEffect(() => {
         const titleMap = {
             '/': 'Home',
-            '/Portfolio': 'Portfolio',
-            '/About-Me': 'About Me'
+            '/portfolio': 'Portfolio',
+            '/about-me': 'About Me'
         }  
 
         const currentTitle = titleMap[location.pathname] || 'Default Title';

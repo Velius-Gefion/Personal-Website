@@ -1,14 +1,14 @@
 import { NavHead } from "../components/utilities"
-import { Row, Col, Image, Card, CardHeader, CardBody, CardFooter } from "react-bootstrap";
+import { Row, Col, Image, Card, CardHeader, CardBody, CardFooter, Container } from "react-bootstrap";
 
 export const AboutMe = () => {
     return (
         <>
-            
-            <h1>About Me</h1>
+            <Container fluid>
+            <h1 className="mt-3 mb-3">About Me</h1>
             <Row className="mt-3">
                 <Col>
-                    <div className="container">
+                    <div>
                         <Card>
                             <CardHeader className="mt-3 mb-3">
                                 <Image src={require('../resources/Me.jpg')} style={{width: "250px", height: "250px"}} fluid/>
@@ -17,9 +17,10 @@ export const AboutMe = () => {
                                 <h5>I am Cyril Dominic P. Cataraja, a Freelancer based in the Philippines</h5>
                             </CardBody>
                             <CardFooter>
-                            <h6>Web Designer</h6>
-                        <h6>Video Editor</h6>
-                        <h6>Grahic Designer</h6>
+                                <h5>I am a</h5>
+                                <h6> - Web Developer</h6>
+                                <h6> - Video Editor</h6>
+                                <h6> - Grahic Designer</h6>
                             </CardFooter>
                         </Card>
                     </div>
@@ -40,6 +41,7 @@ export const AboutMe = () => {
                     />
                 </Col>
             </Row>
+            </Container>
         </>
     )
 }
