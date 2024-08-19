@@ -19,6 +19,11 @@ export const AboutMe = () => {
                             <CardFooter>
                                 <h5>I am a</h5>
                                 <h6> - Web Developer</h6>
+                                <h6>Javascript</h6>
+                                <h6>Java</h6>
+                                <h6>Photoshop</h6>
+                                <h6>Inkscape</h6>
+                                <h6>Vegas Pro 19</h6>
                                 <h6> - Video Editor</h6>
                                 <h6> - Grahic Designer</h6>
                             </CardFooter>
