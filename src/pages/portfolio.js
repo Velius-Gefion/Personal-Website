@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { NavHead } from "../components/utilities"
-import { Carousel, Image, Row, Col, Card, CardBody } from "react-bootstrap";
+import { Carousel, Image, Row, Col, Card, CardBody, Button } from "react-bootstrap";
 
 export const Portfolio = () => {
     return (
@@ -59,28 +59,18 @@ export const Portfolio = () => {
 
             <div className="portfolio-container">
                 <div className="sidebar">
-                    <ul>
-                        <li><a href="#videos">Videos</a></li>
+                    <ul style={{textAlign: "left"}}>
                         <li><a href="#logo">Logo</a></li>
-                        <li><a href="#poster">Post</a></li>
+                        <li><a href="#poster">Poster</a></li>
                         <li><a href="#motion-graphics">Motion Graphics</a></li>
+                        <li><a href="#videos">Videos</a></li>
                         <li><a href="#websites">Functional Sample Websites</a></li>
                     </ul>
                 </div>
 
                 <div className="main-content">
                     <h1 className="mt-3 mb-3">Portfolio</h1>
-                    <div id="videos" style={{position:"relative", top: "-110px"}}/>
-                    <h3 >Videos</h3>
-                    <hr/>
-                    <iframe 
-                        src="https://www.youtube.com/watch?v=qE9O81SL2s4" 
-                        width="560" 
-                        height="314" 
-                        style={{ border: "none", overflow: "hidden" }} 
-                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" 
-                        allowFullScreen={true}
-                    ></iframe>
+                    
                     
                     
                     <div id="logo" style={{position:"relative", top: "-110px"}}/>
@@ -154,11 +144,31 @@ export const Portfolio = () => {
                     <hr/>
                     <Image src={require('../resources/Stand by Screen (Stationary).gif')} fluid/>
                     
+                    <div id="videos" style={{position:"relative", top: "-110px"}}/>
+                    <h3 >Videos</h3>
+                    <hr/>
+                    <iframe 
+                        src="https://www.youtube.com/watch?v=qE9O81SL2s4" 
+                        width="560" 
+                        height="314" 
+                        style={{ border: "none", overflow: "hidden" }} 
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" 
+                        allowFullScreen={true}
+                    ></iframe>
+
                     <div id="websites" style={{position:"relative", top: "-110px"}}/>
                     <h3>Functional Sample Websites</h3>
                     <hr/>
-                    <embed src="https://sei-qr-code-ticket.web.app/" style={{width:"500px", height: "300px"}}></embed>
-                    <embed src="https://badat-health-tracking.web.app/" style={{width:"500px", height: "300px"}}></embed>
+                    <Row>
+                        <Col>
+                            <Button className="mt-3 mb-3" href="https://sei-qr-code-ticket.web.app/">Visit Website</Button>
+                            <embed src="https://sei-qr-code-ticket.web.app/" style={{width:"500px", height: "300px"}}></embed>
+                        </Col>
+                        <Col>
+                            <Button className="mt-3 mb-3" href="https://badat-health-tracking.web.app/">Visit Website</Button>
+                            <embed src="https://badat-health-tracking.web.app/" style={{width:"500px", height: "300px"}}></embed>
+                        </Col>
+                    </Row>
                 </div>
             </div>
         </>
